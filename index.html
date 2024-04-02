@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content" id="loginUser">
+            <h1>WELCOME LOGIN HERE</h1>
+            <div class="user-form">
+                <label for="loginE">Email Address</label>
+                <input type="text" class="input" id="loginE"/>
+                <p class="error-message" id="loginErrorE"></p>
+                <label for="loginP">Password</label>
+                <input type="password" class="input" id="loginP"/>
+                <p class="error-message" id="loginErrorP"></p>
+                <p class="error-message" id="loginErrorAlready"></p>
+            </div>
+            <div class="btn" id="loginBtn">Sign In</div>
+            <p class="registerLink">New User?  <strong><a href="#" onclick="showRegisterForm()">  Register</a></strong></p>
+        </div>
+        <div class="main-content registerDisplay" id="registerUser">
+            <h1>REGISTER HERE!</h1>
+            <div class="user-form">
+                <label for="registerE">Email Address</label>
+                <input type="text" class="input" id="registerE"/>
+                <p class="error-message" id="registerErrorE"></p>
+                <label for="registerP">Password</label>
+                <input type="password" class="input" id="registerP"/>
+                <p class="error-message" id="registerErrorP"></p>
+            </div>
+            <div class="btn" id="registerBtn">Register</div>
+            <div id="registrationMessage" class="registration-message registerDisplay"></div>
+            <p class="loginLink">Already registered?  <strong><a href="#" onclick="showLoginForm()">Login</a></strong></p>
+        </div>
+        <div class="main-content registerDisplay" id="userDashboard">
+            <div class="success-content">
+                <i class="fas fa-check-circle success-icon"></i>
+                <p class="webMessage"><strong>Welcome,<span id="userId"></span>!</strong></p>
+                <p class="page-message">Congratulations, You've successfully logged in to the website!</p>
+                <div class="btn" id="logoutBtn">Logout</div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
